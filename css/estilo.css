@@ -5,13 +5,33 @@ a{text-decoration: none;}
 ul{list-style: none;}
 img{max-width: 100%;}
 
-/*===== CABEÇALHO =====*/
-.cabecalho{
-    width: 100%;
-    float: left;
-    padding: 3% 4%;
+/*===== CONTAINER =====*/
+.container{
+width: 100%;
+float: left;
+padding: 3% 4%;
+text-align: center;
 }
 
+/*===== BG COLORS =====*/
+.bg-gradient{
+    background: linear-gradient(to right, #CE2E3C, #DA6709);
+}
+
+.bg-black{
+    background-color: #130400;
+}
+
+.btn-white{
+    background-color: #FFF;
+}
+
+/*===== HELPERS =====*/
+.radius{
+    border-radius: 7px;
+}
+
+/*===== CABEÇALHO =====*/
 .logo{
     width: 56px;
     height: 56px;
@@ -28,7 +48,6 @@ img{max-width: 100%;}
     color: #FFF;
     border-radius: 56px;
     cursor: pointer;
-    background: linear-gradient(to right, #CE2E3C, #DA6709);
 }
 
 /*===== MENU =====*/
@@ -72,10 +91,6 @@ img{max-width: 100%;}
 
 /*===== BANNER =====*/
 .banner{
-    width: 100%;
-    float: left;
-    text-align: center;
-    padding: 3% 4%;
     background: url(/img/bg.jpg) no-repeat fixed;
 }
 
@@ -103,41 +118,27 @@ img{max-width: 100%;}
     float: right;
 }
 
-.btn-cadastrar{
+.btn{
     width: 100%;
     font-size: 1.5em;
     text-align: left;
     cursor: pointer;
     padding: 5%;
-    border-radius: 10px;
-    background-color: #FFF;
+}
+
+.btn-cadastrar{
     color: #130400;
 }
 
 .btn-sobre{
-    width: 100%;
-    font-size: 1.5em;
-    text-align: left;
-    cursor: pointer;
-    padding: 5%;
-    border-radius: 10px;
-    background-color: #130400;
     color: #FFF;
     margin-top: 2%;
 }
 
 /*===== SERVIÇOS =====*/
-.servicos{
-    width: 100%;
-    float: left;
-    padding: 3% 4%;
-}
-
 .servico{
     width: 100%;
-    background-color: #FFF;
     text-align: left;
-    border-radius: 7px;
     margin-bottom: 3%;
 }
 
@@ -168,14 +169,6 @@ img{max-width: 100%;}
 }
 
 /*===== NEWSLETTER =====*/
-.newsletter{
-    width: 100%;
-    float: left;
-    text-align: center;
-    padding: 3% 4%;
-    background-color: #130400;
-}
-
 .newsletter h2{
     font-size: 1.5em;
     color: #FFF;
@@ -192,19 +185,15 @@ img{max-width: 100%;}
 
 .newsletter input{
     width: 100%;
-    background-color: #130400;
     color: #FFF;
     padding: 5%;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
 }
 
 .newsletter button{
     width: 100%;
-    background-color: #FFF;
     color: #130400;
     padding: 5%;
-    border-radius: 5px;
     cursor: pointer;
     margin-top: 2%;
 }
@@ -212,4 +201,160 @@ img{max-width: 100%;}
 .newsletter button:hover{
     color: #4b413e;
     text-decoration: underline;
+}
+
+/*===== FOOTER =====*/
+.social-icons a{
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 3%;
+}
+
+.social-icons a:last-child{
+    margin-right: 0;
+}
+
+.social-icons a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.copyright{
+    margin-top: 2%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* MEDIA TYPES
+SCREEN
+Para monitores ou dispositivos com telas coloridas e resoluçãoa adequada.
+PRINT
+Para impressoras. Muito usado para dar uma versão de impressão do site.
+*/
+
+/*===== MOBILE FIRST =====*/
+/*===== SMALL DEVICES - SMARTPHONES =====*/
+@media screen and (min-width: 480px){
+    .logo{
+        width: 214px;
+        background: url(/img/logo.png) center center/214px no-repeat;
+    }
+    .btn{
+        font-size: 2em;
+    }
+}
+
+/*===== SMALL DEVICES - TABLETS =====*/
+@media screen and (min-width: 768px){
+    .servico{
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .servico:nth-child(2){
+        margin-right: 0;
+    }
+
+    .newsletter h2{
+        font-size: 2em;
+    }
+
+    .newsletter h3{
+        font-size: 1.5em;
+    }
+
+    .newsletter input{
+        width: 70%;
+        padding: 2%;
+        float: left;
+        margin-right: 1%;
+    }
+
+    .newsletter button{
+        width: 29%;
+        padding: 2%;
+        float: right;
+        margin-top: 0;
+    }
+}
+
+/*===== MEDIUM DEVICES - TABLETS & DESKTOPS =====*/
+@media screen and (min-width: 960px){
+    .title{
+        width: 70%;
+        float: left;
+        text-align: left;
+    }
+
+    .title h2{
+        font-size: 3em;
+    }
+
+    .title h3{
+        font-size: 2em;
+    }
+
+    .buttons{
+        width: 30%;
+        float: right;
+        margin-top: 0;
+    }
+
+    .servico{
+        width: 32%;
+    }
+
+    .servico:nth-child(2){
+        margin-right: 2%;
+    }
+
+    .servico:nth-child(3){
+        margin-right: 0;
+    }
+
+    .newsletter input{
+        width: 60%;
+        float: none;
+    }
+
+    .newsletter button{
+        width: 20%;
+        float: none;
+    }
+}
+
+/*===== large DEVICES - WIDE SCREENS =====*/
+@media screen and (min-width: 1280px){
+    .btn-menu{
+        display: none;
+    }
+
+    .btn-close{
+        display: none;
+    }
+
+    .menu{
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: #F5F5F5;
+        display: block !important;
+        position: static;
+    }
+
+    .menu li{
+        padding: 0;
+        float: left;
+    }
+
+    .menu li a{
+        color: #130400;
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .menu li a:hover{
+        border: none;
+        color: #DA6709;
+    }
 }
